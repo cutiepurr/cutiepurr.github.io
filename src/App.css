@@ -1,4 +1,34 @@
-.App {
+#avatar {
+  max-width: 200px;
+  border-radius: 50%;
+}
+
+.icons {
+  font-size: x-large;
+  margin: 0px 20px 0px 20px;
+  color: #fdbb85;
+}
+
+
+.project-icon {
+  font-size: xx-large;
+  margin: 5px;
+}
+
+.card {
+  opacity: 70%;
+}
+.card:hover {
+  opacity: 100%;
+}
+
+h1, h3, p, div, .foot {
+  color: #435593;
+}
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +65,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
