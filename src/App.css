@@ -6,13 +6,18 @@
 .icons {
   font-size: x-large;
   margin: 0px 20px 0px 20px;
-  color: #fdbb85;
+  /* color: #fdbb85; */
+  color: #8b7c6f;
 }
-
+.icons:hover{
+  color: #84443b;
+}
 
 .project-icon {
   font-size: xx-large;
   margin: 5px;
+  color: #84443b;
+
 }
 
 .card {
@@ -23,6 +28,7 @@
 }
 
 h1, h3, p, div, .foot {
-  color: #435593;
+  color: #7b5344;
+  /* color: #435593; */
 }
 
