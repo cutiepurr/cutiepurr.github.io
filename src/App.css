@@ -6,29 +6,25 @@
 .icons {
   font-size: x-large;
   margin: 0px 20px 0px 20px;
-  /* color: #fdbb85; */
-  color: #8b7c6f;
+  color: #077187;
 }
 .icons:hover{
-  color: #84443b;
+  color: #074F57;
 }
 
 .project-icon {
   font-size: xx-large;
   margin: 5px;
-  color: #84443b;
-
 }
 
 .card {
-  opacity: 70%;
+  opacity: 80%;
 }
 .card:hover {
   opacity: 100%;
 }
 
-h1, h3, p, div, .foot {
-  color: #7b5344;
-  /* color: #435593; */
+h3 {
+  color: #074F57;
+  letter-spacing: 3px;
 }
-
