@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider } from './Divider';
 
-export function Footer(props) {
+export default function Footer(props) {
     return (
         <div className='container footer text-center mt-5 mb-5'>
             <h3>CONTACT</h3>
