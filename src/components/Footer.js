@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Divider } from './Divider';
+import { CONTACT } from "../shared/contact"
 
-export default function Footer(props) {
-    return (
-        <div className='container footer text-center mt-5 mb-5'>
-            <h3>CONTACT</h3>
-            <Divider/>
-            <a className='foot icons' href="mailto:linhtunguyen.1311@gmail.com"><i className="fa fa-envelope"></i></a>
-            <a className='foot icons' href="http://www.linkedin.com/in/nguyen-thi-tu-linh"><i className="fa fa-linkedin"></i></a>
-            <a className='foot icons' href="https://github.com/cutiepurr"><i className="fa fa-github"></i></a>
-            <p className='text-muted mt-3'><small>Created using React.js and hosted on GitHub</small></p>
-        </div>
-    );
+export default class Footer extends Component {
+    constructor(prop) {
+        super(prop);
+        this.state = {
+            contact: CONTACT
+        }
+    }
+    render(){
+        const contactList = this.state.contact.map(item => {
+            return (
+                <a className='foot icons green' href={item.url} title={item.type} target='_blank'>
+                    <i className={item.icon}></i>
+                </a>
+            );
+        });
+        return (
+            <div className='container footer text-center mt-5 mb-5'>
+                <h3>CONTACT</h3>
+                <Divider/>
+                <div>{contactList}</div>
+                <p className='text-muted mt-3'><small>Created using React.js and hosted on GitHub</small></p>
+            </div>
+        );
+    }
 }

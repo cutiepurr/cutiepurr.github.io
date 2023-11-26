@@ -24,8 +24,8 @@ export default class Exp extends Component {
                         <div><b>{startDate}</b></div>
                     </div>
                     <div class="col-sm-9">
-                        <div><a href={item.companyURL}>{item.company}</a></div>
-                        <div>{item.start > new Date() && "(expected)"} {item.position}</div>
+                        <div><a href={item.companyURL} target='_blank'>{item.company}</a></div>
+                        <div>{item.start > new Date() && <i>(upcoming)</i>} {item.position}</div>
                     </div>
                 </div>
             );

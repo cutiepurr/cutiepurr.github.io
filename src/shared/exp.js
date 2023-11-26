@@ -15,7 +15,7 @@ export const EXP = [
     },
     {
         "start": new Date(2023, 10),
-        "end": null,
+        "end": new Date(2024, 1),
         "company": "Maptek",
         "companyURL": "https://www.maptek.com/",
         "position": "Software Engineer Intern"
