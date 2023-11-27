@@ -9,7 +9,7 @@ export const PROJECTS = [
     {
         name: "Social Student Clubs",
         github: "https://github.com/cutiepurr/social-student-clubs",
-        website: "https://nzetmwb5qa.ap-southeast-2.awsapprunner.com/",
+        website: "http://social-student-clubs.ap-southeast-2.elasticbeanstalk.com/",
         description: "JavaScript, Vue, Express, Node, MySQL",
         thumbnail: "assets/Clubs.png"
     },
