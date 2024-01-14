@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PROJECTS } from '../shared/projects';
-import { CardGroup, Card, CardBody, CardTitle, CardFooter, CardImg } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardFooter } from 'reactstrap';
 import { Divider } from './Divider';
 
 export default class Exp extends Component {

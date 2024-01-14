@@ -11,7 +11,7 @@ export const CONTACT = [
     },
     {
         type: "GitHub",
-        url: "https://github.com/cutiepurr",
+        url: "https://github.com/ttlinhnguyen",
         icon: "fa fa-github"
     }
 ]
