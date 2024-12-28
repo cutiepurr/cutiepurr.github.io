@@ -32,7 +32,7 @@ export default class Exp extends Component {
 
         return (
             <div className='container mx-auto text-center mt-5'>
-                <h3>PERSONAL PROJECTS</h3>
+                <h3>PROJECTS</h3>
                 <Divider/>
                 <div className='container'>
                     <div className='row'>{projects}</div>
