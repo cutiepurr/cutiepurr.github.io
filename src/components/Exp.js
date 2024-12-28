@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import { EXP } from '../shared/exp';
 
 export default class Exp extends Component {
@@ -6,26 +7,22 @@ export default class Exp extends Component {
         super(prop);
         this.state = {
             exp: EXP.sort((a, b) => {
-                return a.start > b.start ? -1 : 1;
+                return a.startDate > b.startDate ? -1 : 1;
             })
         };
     }
 
     render() {
         const list = this.state.exp.map(item => {
-            let startDate = item.start.toLocaleDateString("en-au" , {month: "short", year: "numeric"});
-            let endDate;
-            if (item.end) endDate = item.end.toLocaleDateString("en-au" , {month: "short", year: "numeric"});
             return (
                 <div class="row mt-3">
                     <div class="col-sm-3" style={{"borderLeft": "3px solid lightgrey"}}>
-                        <div><b>{endDate}</b></div>
-                        {endDate && <br></br>}
-                        <div><b>{startDate}</b></div>
+                        <div><b>{item.endDate ? moment(item.endDate).format("MMM YYYY") : "Present"}</b></div>
+                        <div><b>{moment(item.startDate).format("MMM YYYY")}</b></div>
                     </div>
                     <div class="col-sm-9">
                         <div><a href={item.companyURL} target='_blank'>{item.company}</a></div>
-                        <div>{item.start > new Date() && <i>(upcoming)</i>} {item.position}</div>
+                        <div>{item.position}</div>
                     </div>
                 </div>
             );

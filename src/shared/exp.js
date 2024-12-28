@@ -1,23 +1,30 @@
 export const EXP = [
     {
-        "start": new Date(2022, 11),
-        "end": new Date(2023, 1),
+        "startDate": "2022-12-19",
+        "endDate": "2023-02-24",
         "company": "Department for Infrastructure and Transport",
         "companyURL": "http://dit.sa.gov.au/",
-        "position": "Microsoft SharePoint Developer Intern"
+        "position": "IT Intern",
     },
     {
-        "start": new Date(2022, 10),
-        "end": new Date(2022, 11),
-        "company": "University of Adelaide",
-        "companyURL": "http://adelaide.edu.au/",
-        "position": "Summer Research Scholarship"
-    },
-    {
-        "start": new Date(2023, 10),
-        "end": new Date(2024, 1),
+        "startDate": "2023-11-20",
+        "endDate": "2024-02-16",
         "company": "Maptek",
         "companyURL": "https://www.maptek.com/",
-        "position": "Software Engineer Intern"
-    }
+        "position": "Software Engineer Intern",
+    },
+    {
+        "startDate": "2024-04-22",
+        "endDate": "2024-06-28",
+        "company": "Chrysos Corporation",
+        "companyURL": "https://chrysoscorp.com/",
+        "position": "Software Engineer Intern",
+    },
+    {
+        "startDate": "2024-07-29",
+        "endDate": "",
+        "company": "Chrysos Corporation",
+        "companyURL": "https://chrysoscorp.com/",
+        "position": "Associate Software Engineer",
+    },
 ]
