@@ -12,7 +12,8 @@ export default class Footer extends Component {
     render(){
         const contactList = this.state.contact.map(item => {
             return (
-                <a className='foot icons green' href={item.url} title={item.type} target='_blank'>
+                <a className='foot icons green' key={item.type}
+                    href={item.url} title={item.type} target='_blank' rel="noreferrer">
                     <i className={item.icon}></i>
                 </a>
             );

@@ -15,13 +15,13 @@ export default class Exp extends Component {
     render() {
         const list = this.state.exp.map(item => {
             return (
-                <div class="row mt-3">
-                    <div class="col-sm-3" style={{"borderLeft": "3px solid lightgrey"}}>
+                <div className="row mt-3" key={(item.startDate, item.endDate)}>
+                    <div className="col-sm-3" style={{"borderLeft": "3px solid lightgrey"}}>
                         <div><b>{item.endDate ? moment(item.endDate).format("MMM YYYY") : "Present"}</b></div>
                         <div><b>{moment(item.startDate).format("MMM YYYY")}</b></div>
                     </div>
-                    <div class="col-sm-9">
-                        <div><a href={item.companyURL} target='_blank'>{item.company}</a></div>
+                    <div className="col-sm-9">
+                        <div><a href={item.companyURL} target='_blank' rel="noreferrer">{item.company}</a></div>
                         <div>{item.position}</div>
                     </div>
                 </div>

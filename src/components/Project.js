@@ -14,7 +14,7 @@ export default class Exp extends Component {
     render() {
         const projects = this.state.projects.map(project => {
             return (
-                <Card className="col-md-4 mb-3" style={{padding: 0}}>
+                <Card className="col-md-4 mb-3" style={{padding: 0}} key={project.name}>
                     {project.thumbnail !=="" &&
                             <div style={{backgroundImage: `url(${project.thumbnail})`, backgroundSize: "cover", width: "100%", height: "200px"}}></div> }
                     <CardBody>
@@ -22,9 +22,9 @@ export default class Exp extends Component {
                         <p className='text-muted'>{project.description}</p>
                     </CardBody>
                     <CardFooter>
-                        <a href={project.github} className='icons green' title="Github Repo" target='_blank'><i class="fa fa-github-square"></i></a>
+                        <a href={project.github} className='icons green' title="Github Repo" target='_blank' rel="noreferrer"><i className="fa fa-github-square"></i></a>
                         {project.website!=="" &&
-                            <a href={project.website} className='icons green' title="Website" target='_blank'><i class="fa fa-globe"></i></a>}
+                            <a href={project.website} className='icons green' title="Website" target='_blank' rel="noreferrer"><i className="fa fa-globe"></i></a>}
                     </CardFooter>
                 </Card>
             );
