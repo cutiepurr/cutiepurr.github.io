@@ -27,4 +27,4 @@ export const EXP = [
         "companyURL": "https://chrysoscorp.com/",
         "position": "Associate Software Engineer",
     },
-]
+];

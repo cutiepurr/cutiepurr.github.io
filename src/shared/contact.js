@@ -14,4 +14,4 @@ export const CONTACT = [
         url: "https://github.com/ttlinhnguyen",
         icon: "fa fa-github"
     }
-]
+];

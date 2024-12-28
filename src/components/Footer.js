@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Divider } from './Divider';
-import { CONTACT } from "../shared/contact"
+import { CONTACT } from "../shared/contact";
 
 export default class Footer extends Component {
     constructor(prop) {
         super(prop);
         this.state = {
             contact: CONTACT
-        }
+        };
     }
     render(){
         const contactList = this.state.contact.map(item => {

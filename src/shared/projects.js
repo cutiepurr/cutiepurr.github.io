@@ -20,4 +20,4 @@ export const PROJECTS = [
         description: "JavaScript, React",
         thumbnail: "assets/Portfolio.png"
     }
-]
+];

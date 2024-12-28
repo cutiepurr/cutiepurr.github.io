@@ -5,4 +5,4 @@ export const ABOUT = {
     in software development and distributed systems. I'm currently in my second year of the Bachelor of Computer Science (major in 
     Distributed Systems and Networking)  
     at the University of Adelaide.`
-}
+};
