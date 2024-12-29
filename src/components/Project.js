@@ -1,45 +1,44 @@
 import React from "react";
 import { PROJECTS } from "../shared/projects";
-import { Divider } from "./Divider";
 
 const Project = () => {
-    const projects = PROJECTS.map(project => {
-        return (
-            <div className="" style={{padding: 0}} key={project.name}>
-                {
-                    project.thumbnail !=="" &&
-                        <div style={{
-                            backgroundImage: `url(${project.thumbnail})`, 
-                            backgroundSize: "cover", width: "100%", height: "200px"
-                        }}></div>
-                }
-                <div>
-                    <div className='mt-4'>{project.name}</div>
-                    <p className='text-muted'>{project.description}</p>
+    const projects = PROJECTS.map(project => 
+        (
+            <div key={project.name} 
+                className="grid grid-cols-12 gap-5 h-32">
+                <div className="bg-cover bg-center rounded-lg col-span-3 shadow-xl" 
+                    style={{
+                        backgroundImage: `url("${project.thumbnail}")`,
+                    }}>
                 </div>
-                <div>
-                    <a href={project.github} className='icons green' 
-                        title="Github Repo" target='_blank' rel="noreferrer">
-                        <i className="fa fa-github-square"></i>
-                    </a>
-                    {
-                        project.website!=="" &&
-                            <a href={project.website} className='icons green' 
-                                title="Website" target='_blank' rel="noreferrer"><
-                                    i className="fa fa-globe"></i>
-                            </a>
-                    }
+                <div className="col-span-9 place-content-center">
+                    <h3>{project.name}</h3>
+                    <p className="text-sm">{project.description}</p>
+                    <div className="flex gap-3">
+                        <a href={project.github} className='text-2xl' 
+                            title="Github Repo" target='_blank' rel="noreferrer">
+                            <i className="fa fa-github-square"></i>
+                        </a>
+                        {
+                            project.website!=="" &&
+                        <a href={project.website} className='text-2xl' 
+                            title="Website" target='_blank' rel="noreferrer">
+                            <i className="fa fa-globe"></i>
+                        </a>
+                        }
+                    </div>
                 </div>
             </div>
-        );
-    });
+        )
+    );
 
     return (
-        <div className=''>
-            <h3>PROJECTS</h3>
-            <Divider/>
-            <div className=''>
-                <div className=''>{projects}</div>
+        <div className="grid sm:grid-cols-12 w-full">
+            <h2 className="col-span-3">Projects</h2>
+            <div className="col-span-9">
+                <div className="flex flex-col gap-5">
+                    {projects}
+                </div>
             </div>
         </div>
     );
