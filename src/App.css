@@ -3,29 +3,27 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-stone-50;
-  }
   h1 {
-    @apply text-4xl font-black;
+    @apply text-5xl font-black;
   }
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-3xl font-bold;
   }
   h3 {
     @apply text-lg font-semibold;
   }
-  a {
-    @apply text-teal-700 hover:underline;
+  a, button {
+    @apply hover:opacity-80;
   }
-  input {
-    @apply border rounded p-2;
+  a {
+    @apply text-teal-700 dark:text-teal-400 hover:underline;
   }
   button {
-    @apply rounded bg-slate-900 hover:bg-slate-700 text-white p-2;
+    @apply rounded p-2 dark:bg-stone-100 dark:text-black bg-slate-800 text-white;
   }
-  main {
-    @apply bg-slate-950 text-slate-100;
+  main, footer {
+    @apply w-full sm:max-w-2xl lg:max-w-3xl mx-auto;
+    /* @apply bg-slate-950 text-slate-100; */
   }
 }
 

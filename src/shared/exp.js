@@ -28,7 +28,7 @@ export const EXP = [
         "description": "",
     },
     {
-        "startDate": "2024-12-31",
+        "endDate": "2024-12-31",
         "company": UOA,
         "position": "Completed Bachelor of Computer Science",
         "description": "",
@@ -55,7 +55,7 @@ export const EXP = [
         "description": "",
     },
     {
-        "startDate": "2022-02-28",
+        "endDate": "2022-02-28",
         "company": UOA,
         "position": "Started Bachelor of Computer Science",
         "description": "",

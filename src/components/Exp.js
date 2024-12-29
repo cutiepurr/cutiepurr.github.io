@@ -7,14 +7,16 @@ const Exp = () => {
         return a.endDate > b.endDate ? -1 : 1;
     });
 
-    const list = exp.map(item => {
+    const list = EXP.map(item => {
         let endDate, duration;
-        const startDate = moment(item.startDate).format("MMM YYYY");
+        const startDate = item.startDate ? moment(item.startDate).format("MMM YYYY") : item.startDate;
+        
         if (!item.endDate) endDate = item.endDate;
-        else {
+        else if (item.endDate == moment().format("YYYY-MM-DD")) endDate = "Present";
+        else endDate = moment(item.endDate).format("MMM YYYY");
+        
+        if (item.startDate && item.endDate) {
             duration = moment(item.endDate).diff(moment(item.startDate), "months", true).toFixed(1);
-            if (item.endDate == moment().format("YYYY-MM-DD")) endDate = "Present";
-            else endDate = moment(item.endDate).format("MMM YYYY");
         }
         return (
             <div key={(item.startDate, item.endDate)}
@@ -23,8 +25,10 @@ const Exp = () => {
                     <div className="absolute size-3 bg-gray-300 border border-white 
                         rounded-full -start-1.5 mt-1.5"></div>
                     <div>
-                        {startDate} 
-                        {endDate && <> &ndash; {endDate} ({duration} months)</> }
+                        {startDate && startDate} 
+                        {startDate && endDate && <> &ndash; </>}
+                        {endDate && endDate}
+                        {duration && ` (${duration} months)`}
                     </div>
                 </div>
                 <div>
