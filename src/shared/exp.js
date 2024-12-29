@@ -1,34 +1,63 @@
-export const EXP = [
+import moment from "moment";
+
+// Companies
+const CHRYSOS = {
+    "name": "Chrysos Corporation",
+    "url": "https://chrysoscorp.com/",
+};
+const MAPTEK = {
+    "name": "Maptek",
+    "url": "https://www.maptek.com/",
+};
+const DIT = {
+    "name": "Department for Infrastructure and Transport",
+    "url": "http://dit.sa.gov.au/",
+};
+const UOA = {
+    "name": "University of Adelaide",
+    "url": "https://www.adelaide.edu.au/",
+};
+
+// Experience
+export const EXP = [ 
     {
-        "startDate": "2022-12-19",
-        "endDate": "2023-02-24",
-        "company": "Department for Infrastructure and Transport",
-        "companyURL": "http://dit.sa.gov.au/",
-        "position": "IT Intern",
-        "tech": "Microsoft PowerApp",
+        "startDate": "2024-07-29",
+        "endDate": moment().format("YYYY-MM-DD"),
+        "company": CHRYSOS,
+        "position": "Associate Software Engineer",
+        "description": "",
     },
     {
-        "startDate": "2023-11-20",
-        "endDate": "2024-02-16",
-        "company": "Maptek",
-        "companyURL": "https://www.maptek.com/",
-        "position": "Software Engineer Intern",
-        "tech": "C#, .NET Framework, WPF (Windows Presentation Foundation)",
+        "startDate": "2024-12-31",
+        "company": UOA,
+        "position": "Completed Bachelor of Computer Science",
+        "description": "",
     },
     {
         "startDate": "2024-04-22",
         "endDate": "2024-06-28",
-        "company": "Chrysos Corporation",
-        "companyURL": "https://chrysoscorp.com/",
+        "company": CHRYSOS,
         "position": "Software Engineer Intern",
-        "tech": "Python, Django, JavaScript, Vue, GraphQL",
+        "description": "",
     },
     {
-        "startDate": "2024-07-29",
-        "endDate": "",
-        "company": "Chrysos Corporation",
-        "companyURL": "https://chrysoscorp.com/",
-        "position": "Associate Software Engineer",
-        "tech": "Python, Django, JavaScript, Vue, GraphQL, Golang, AWS",
+        "startDate": "2023-11-20",
+        "endDate": "2024-02-16",
+        "company": MAPTEK,
+        "position": "Software Engineer Intern",
+        "description": "",
+    },
+    {
+        "startDate": "2022-12-19",
+        "endDate": "2023-02-24",
+        "company": DIT,
+        "position": "IT Intern",
+        "description": "",
+    },
+    {
+        "startDate": "2022-02-28",
+        "company": UOA,
+        "position": "Started Bachelor of Computer Science",
+        "description": "",
     },
 ];

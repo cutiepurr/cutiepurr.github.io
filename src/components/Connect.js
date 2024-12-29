@@ -1,10 +1,8 @@
 import React from "react";
-import { Divider } from "./Divider";
 import { CONTACT } from "../shared/contact";
 
 const Connect = () => {
-    const contact = CONTACT;
-    const contactList = contact.map(item => {
+    const contactList = CONTACT.map(item => {
         return (
             <a className="text-3xl" key={item.type}
                 href={item.url} title={item.type} target='_blank' rel="noreferrer">
