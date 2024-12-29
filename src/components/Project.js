@@ -1,17 +1,18 @@
 import React from "react";
 import { PROJECTS } from "../shared/projects";
+import SectionTemplate from "./SectionTemplate";
 
 const Project = () => {
     const projects = PROJECTS.map(project => 
         (
             <div key={project.name} 
                 className="grid grid-cols-12 gap-5 h-32">
-                <div className="bg-cover bg-center rounded-lg col-span-3 shadow-xl" 
+                <div className="sm:col-span-3 col-span-5 bg-cover bg-center rounded-lg shadow-xl" 
                     style={{
                         backgroundImage: `url("${project.thumbnail}")`,
                     }}>
                 </div>
-                <div className="col-span-9 place-content-center">
+                <div className="sm:col-span-9 col-span-7 place-content-center">
                     <h3>{project.name}</h3>
                     <p className="text-sm">{project.description}</p>
                     <div className="flex gap-3">
@@ -33,14 +34,11 @@ const Project = () => {
     );
 
     return (
-        <div className="grid sm:grid-cols-12 w-full">
-            <h2 className="col-span-3 pr-2">📽️ Projects</h2>
-            <div className="col-span-9">
-                <div className="flex flex-col gap-5">
-                    {projects}
-                </div>
+        <SectionTemplate heading="Projects" icon="📽️">
+            <div className="flex flex-col gap-5">
+                {projects}
             </div>
-        </div>
+        </SectionTemplate>
     );
 };
 

@@ -15,7 +15,7 @@ const App = () => {
 
     return (
         <>
-            <main className="p-3 flex flex-col gap-10">
+            <main className="flex flex-col gap-10">
                 <div>
                     <button onClick={toggleDarkMode} className="float-end">
                         {darkMode 
@@ -29,7 +29,7 @@ const App = () => {
                 <Project />
                 <Connect />
             </main>
-            <footer className="p-3">
+            <footer>
                 <p>Created using React.js & Tailwind CSS. Hosted on GitHub</p>
             </footer>
         </>

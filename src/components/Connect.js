@@ -1,5 +1,6 @@
 import React from "react";
 import { CONTACT } from "../shared/contact";
+import SectionTemplate from "./SectionTemplate";
 
 const Connect = () => {
     const contactList = CONTACT.map(item => {
@@ -11,10 +12,9 @@ const Connect = () => {
         );
     });
     return (
-        <div className="grid grid-cols-12">
-            <h2 className="col-span-3">👋 Connect with me</h2>
-            <div className="col-span-9 flex gap-10 place-items-center">{contactList}</div>
-        </div>
+        <SectionTemplate heading="Connect with me" icon="👋">
+            <div className="flex gap-10 place-items-center size-full">{contactList}</div>
+        </SectionTemplate>
     );
 };
 

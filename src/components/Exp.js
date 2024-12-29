@@ -1,18 +1,19 @@
 import React from "react";
 import moment from "moment";
 import { EXP } from "../shared/exp";
+import SectionTemplate from "./SectionTemplate";
 
 const Exp = () => {
     const exp =  EXP.sort((a, b) => {
         return a.endDate > b.endDate ? -1 : 1;
     });
 
-    const list = EXP.map(item => {
+    const list = exp.map(item => {
         let endDate, duration;
         const startDate = item.startDate ? moment(item.startDate).format("MMM YYYY") : item.startDate;
         
         if (!item.endDate) endDate = item.endDate;
-        else if (item.endDate == moment().format("YYYY-MM-DD")) endDate = "Present";
+        else if (item.endDate === moment().format("YYYY-MM-DD")) endDate = "Present";
         else endDate = moment(item.endDate).format("MMM YYYY");
         
         if (item.startDate && item.endDate) {
@@ -45,10 +46,9 @@ const Exp = () => {
     });
 
     return (
-        <div className="grid sm:grid-cols-12">
-            <h2 className="col-span-3">🚗 My Journey</h2>
-            <div className="col-span-9">{list}</div>        
-        </div>
+        <SectionTemplate heading="My Journey" icon="🚗">
+            {list}
+        </SectionTemplate>
     );
 };
 
