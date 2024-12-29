@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  #root {
+    @apply w-full h-full bg-stone-100 text-slate-800 dark:bg-slate-800 dark:text-white;
+  }
   h1 {
     @apply text-5xl font-black;
   }
@@ -19,7 +22,7 @@
     @apply text-teal-700 dark:text-teal-400 hover:underline;
   }
   button {
-    @apply rounded p-2 dark:bg-stone-100 dark:text-black bg-slate-800 text-white;
+    @apply rounded p-2 dark:bg-stone-100 dark:text-slate-800 bg-slate-800 text-white;
   }
   main, footer {
     @apply w-full sm:max-w-2xl lg:max-w-3xl mx-auto;
@@ -29,12 +32,13 @@
 
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: "Inter", sans-serif;
 }
 
 code {

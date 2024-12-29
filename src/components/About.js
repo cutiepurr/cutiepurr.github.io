@@ -7,8 +7,8 @@ const About = () => {
     return (
         <div className="h-96 place-items-center flex">
             <div>
-                <h1 className=''>{about.header}</h1>
-                <div className=''>{about.description}</div>
+                <h1>{about.header}</h1>
+                <div className="mt-5">{about.description}</div>
             </div>
         </div>
     );
