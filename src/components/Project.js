@@ -34,7 +34,7 @@ const Project = () => {
 
     return (
         <div className="grid sm:grid-cols-12 w-full">
-            <h2 className="col-span-3">Projects</h2>
+            <h2 className="col-span-3 pr-2">📽️ Projects</h2>
             <div className="col-span-9">
                 <div className="flex flex-col gap-5">
                     {projects}

@@ -46,7 +46,7 @@ const Exp = () => {
 
     return (
         <div className="grid sm:grid-cols-12">
-            <h2 className="col-span-3">My Journey</h2>
+            <h2 className="col-span-3">🚗 My Journey</h2>
             <div className="col-span-9">{list}</div>        
         </div>
     );
