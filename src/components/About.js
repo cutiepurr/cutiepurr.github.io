@@ -10,9 +10,9 @@ const About = () => {
                 <img src={about.image} alt="avatar" className='size-64 rounded-full' />
                 <h1 className='green fw-semibold'>{about.name}</h1>
             </div>
-            <div className="grid grid-cols-5 m-auto">
-                <h3 className='col-span-1'>ABOUT ME</h3>
-                <div className='col-span-4' style={{"borderLeft": "5px solid #ffc821"}}>{about.description}</div>
+            <div className="m-auto">
+                <h3 className='col-span-1'>About Me</h3>
+                <div className='col-span-4'>{about.description}</div>
             </div>
         </div>
     );
