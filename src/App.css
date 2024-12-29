@@ -3,14 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-stone-50;
+  }
   h1 {
-    @apply text-2xl;
+    @apply text-4xl font-black;
   }
   h2 {
-    @apply text-xl;
+    @apply text-2xl font-bold;
   }
   h3 {
-    @apply text-lg;
+    @apply text-lg font-semibold;
   }
   a {
     @apply text-blue-600;
